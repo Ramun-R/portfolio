@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Portfolio Page</title>
-    <link rel="stylesheet" href="css/style.css">
+    <head>
+        <title>Portfolio Page</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -17,6 +17,29 @@
             <p>Age: 21</p>
             <p>Main Language: C++</p>
         </div>
+    </div>
+    <div class="tabs">
+        <button class="tab-button" id="1" onclick="showTab('skills')">Skills</button>
+        <button class="tab-button" id="2" onclick="showTab('flux-engine')">Flux Engine</button>
+        <button class="tab-button" id="3" onclick="showTab('projects')">Projects</button>
+    </div>
+    <div class="tab-content" id="skills">
+        <p>Skills Content</p>
+        <p>Skills Content</p>
+        <p>Skills Content</p>
+        <p>Skills Content</p>
+    </div>
+    <div class="tab-content" id="flux-engine" style="display: none;">
+        <p>Flux Content</p>
+        <p>Flux Content</p>
+        <p>Flux Content</p>
+        <p>Flux Content</p>
+    </div>
+    <div class="tab-content" id="projects" style="display: none;">
+        <p>Projects Content</p>
+        <p>Projects Content</p>
+        <p>Projects Content</p>
+        <p>Projects Content</p>
     </div>
 </body>
 

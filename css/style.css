@@ -1,3 +1,7 @@
+:root {
+    --primary-color: rgb(15, 15, 15);
+    --active-text-color: whitesmoke;
+}
 body{
     margin: 0%;
 }
@@ -8,8 +12,8 @@ p{
 
 .container{
     display: flex;
-    background-color: rgb(15, 15, 15);
-    color: whitesmoke;
+    background-color: var(--primary-color);
+        color: var(--active-text-color);
 }
 
 .profile-container{
@@ -27,4 +31,32 @@ p{
     margin: auto;
     width: 100vw;
 
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tab-button {
+    width: 150px;
+    height: 35px;
+    font-size: large;
+    color: rgb(100, 100, 100);
+    background-color: var(--primary-color);
+
+}
+
+.tab-button:hover {
+    text-decoration: underline;
+}
+
+.tab-button.active {
+    color: var(--active-text-color);
+}
+
+.tab-content {
+    text-align: center;
+    color: black;
 }

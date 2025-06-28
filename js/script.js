@@ -1,14 +1,25 @@
-function showTab(tabID){
-    var allContents = document.querySelectorAll('.tab-content');
-    allContents.forEach(a => a.style.display = 'none');
 
-    var allTabButtons = document.querySelectorAll('.tab-button');
-    allTabButtons.forEach(b => b.classList.remove('active'));
-    event.target.classList.add('active');
+if (!localStorage.getItem("theme")) {
+    const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const defaultTheme = preferDark ? "dark" : "light";
+    document.body.setAttribute("data-theme", defaultTheme);
+}
+else{
+    const defaultTheme = localStorage.getItem("theme");
+    document.body.setAttribute("data-theme", defaultTheme);
+}
 
-    var targetContents = document.getElementById(tabID);
-    targetContents.style.display = 'block';
+function scrollToSection(sectionID){
+    document.getElementById(sectionID).scrollIntoView({ behavior: "smooth" });
+}
 
-
-
+function toggleDarkMode(){
+    if (document.body.getAttribute("data-theme") === "light"){ 
+        document.body.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+    }
+    else {
+        document.body.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+    }
 }

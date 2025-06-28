@@ -2,45 +2,77 @@
 <html>
     <head>
         <title>Portfolio Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body data-theme="light">
+        <div class="fixed-bar">
+            <button onclick="scrollToSection('skills')">Skills</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button onclick="scrollToSection('hobbies')">Hobbies</button>
+            <button>Contact</button>
+            <button onclick="toggleDarkMode()">
+                <img src="img/" alt="sun icon" width="32" height="32"><!-- Moon icons created by Good Ware - Flaticon" -->
+            </button>
+        </div>
+        <header>
+            <div class="profile-container">
+                <img src="img/profile.jpg" class="profile-pic" alt="profile picture">
+            </div>
+            <div class="heading">
+                <h1>Rothe Ramuntshi</h1>
+                <p>Gender: Male<br>
+                    Occupation: CS Student<br>
+                Languages: C, C++, C#, Bash, Java, Javascript </p>
+            </div>
+        </header>
+        <main>
+            <section id="skills">
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+                <p>Skills Content</p>
+            </section>
+            <section id="projects">
+                <p>Projects Content</p>
+                <p>Projects Content</p>
+                <p>Projects Content</p>
+                <p>Projects Content</p>
+            </section>
+            <section id="hobbies">
+                <p>Hobby Content</p>
+                <p>Hobby Content</p>
+                <p>Hobby Content</p>
+                <p>Hobby Content</p>
+            </section>
+        </main>
+        <footer></footer>
         <script src="js/script.js"></script>
-</head>
-
-<body>
-    <div class="container">
-        <div class="profile-container">
-            <!-- <img src="img/profile-background.png" class="profile-pic"> -->
-            <img src="img/profile.jpg" class="profile-pic profile-fg" alt="profile picture">
-        </div>
-        <div class="heading">
-            <h1>Rothe Ramuntshi</h1>
-            <p>Age: 21</p>
-            <p>Main Language: C++</p>
-        </div>
-    </div>
-    <div class="tabs">
-        <button class="tab-button" id="1" onclick="showTab('skills')">Skills</button>
-        <button class="tab-button" id="2" onclick="showTab('flux-engine')">Flux Engine</button>
-        <button class="tab-button" id="3" onclick="showTab('projects')">Projects</button>
-    </div>
-    <div class="tab-content" id="skills">
-        <p>Skills Content</p>
-        <p>Skills Content</p>
-        <p>Skills Content</p>
-        <p>Skills Content</p>
-    </div>
-    <div class="tab-content" id="flux-engine" style="display: none;">
-        <p>Flux Content</p>
-        <p>Flux Content</p>
-        <p>Flux Content</p>
-        <p>Flux Content</p>
-    </div>
-    <div class="tab-content" id="projects" style="display: none;">
-        <p>Projects Content</p>
-        <p>Projects Content</p>
-        <p>Projects Content</p>
-        <p>Projects Content</p>
-    </div>
-</body>
-
+    </body>
 </html>

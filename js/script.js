@@ -1,12 +1,11 @@
 
 if (!localStorage.getItem("theme")) {
     const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const defaultTheme = preferDark ? "dark" : "light";
-    document.body.setAttribute("data-theme", defaultTheme);
+    preferDark ? setDarkMode() : setLightMode();
 }
 else{
-    const defaultTheme = localStorage.getItem("theme");
-    document.body.setAttribute("data-theme", defaultTheme);
+    if(localStorage.getItem("theme") === "dark") setDarkMode();
+    else setLightMode();
 }
 
 function scrollToSection(sectionID){
@@ -14,12 +13,17 @@ function scrollToSection(sectionID){
 }
 
 function toggleDarkMode(){
-    if (document.body.getAttribute("data-theme") === "light"){ 
-        document.body.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-    }
-    else {
-        document.body.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light");
-    }
+    if (document.body.getAttribute("data-theme") === "light") setDarkMode();
+    else setLightMode();
+}
+
+function setDarkMode(){
+    document.body.setAttribute("data-theme", "dark");
+    document.getElementById("theme-icon").alt = "sun icon";
+    localStorage.setItem("theme", "dark");
+}
+function setLightMode(){
+    document.body.setAttribute("data-theme", "light");
+    document.getElementById("theme-icon").alt = "moon icon";
+    localStorage.setItem("theme", "light");
 }

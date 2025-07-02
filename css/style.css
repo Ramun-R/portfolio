@@ -4,6 +4,7 @@
     --active-text-color: black;
 
     --highlight-time: 0.5s;
+    --highlight-time-scale: 0.3s;
 }
 
 [data-theme="dark"]{
@@ -27,7 +28,7 @@ header {
     display: flex;
     flex-direction: row;
     padding-top: 50px;
-    height: 50vh;
+    height: auto;
 }
 
 section{
@@ -60,7 +61,6 @@ section{
 
 .fixed-bar button:hover {
     color: var(--secondary-color);
-    transition: color var(--highlight-time) ease;
 }
 
 .fixed-bar button.active {
@@ -70,8 +70,8 @@ section{
 .profile-container {
     display: flex;
     justify-content: flex-end;
-    width: 50%;
-    height: 100%;
+    height: 300px;
+    margin-left: auto;
 
 }
 
@@ -81,12 +81,13 @@ section{
     border-radius: 50%;
     margin: 20px;
 
-    transition: background-color var(--highlight-time) ease;
+    will-change: transform;
+    transition: background-color var(--highlight-time) ease, transform var(--highlight-time-scale) ease;
 }
 
 .profile-pic:hover{
     background-color: var(--secondary-color);
-    transition: background-color var(--highlight-time) ease;
+    transform: scale(1.15);
 }
 
 .heading{

@@ -4,7 +4,7 @@
     --active-text-color: black;
 
     --highlight-time: 0.5s;
-    --highlight-time-scale: 0.3s;
+    --highlight-time-transform: 0.3s;
 }
 
 [data-theme="dark"]{
@@ -82,12 +82,12 @@ section{
     margin: 20px;
 
     will-change: transform;
-    transition: background-color var(--highlight-time) ease, transform var(--highlight-time-scale) ease;
+    transition: background-color var(--highlight-time) ease, transform var(--highlight-time-transform) ease;
 }
 
 .profile-pic:hover{
     background-color: var(--secondary-color);
-    transform: scale(1.15);
+    transform: scale(1.1) rotate(-10deg);
 }
 
 .heading{

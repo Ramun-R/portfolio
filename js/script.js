@@ -19,11 +19,15 @@ function toggleDarkMode(){
 
 function setDarkMode(){
     document.body.setAttribute("data-theme", "dark");
-    document.getElementById("theme-icon").alt = "sun icon";
+    let icon = document.getElementById("theme-icon");
+    icon.src = "img/icons/sun-1.png";
+    icon.alt = "sun icon";
     localStorage.setItem("theme", "dark");
 }
 function setLightMode(){
     document.body.setAttribute("data-theme", "light");
-    document.getElementById("theme-icon").alt = "moon icon";
+    let icon = document.getElementById("theme-icon");
+    icon.src = "img/icons/moon-1.png";
+    icon.alt = "moon icon";
     localStorage.setItem("theme", "light");
 }
